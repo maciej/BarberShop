@@ -1,0 +1,15 @@
+# Standard
+*~
+.DS_Store
+
+# SBT
+target/
+lib_managed/
+src_managed/
+project/boot/
+
+# IDEA
+*.iml
+.idea
+*.iws
+*.ipr
