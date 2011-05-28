@@ -1,7 +1,7 @@
 import sbt._
 import de.element34.sbteclipsify._
 
-class SleepingBarberProject(info: ProjectInfo) extends DefaultProject(info)
+class BarberShopProject(info: ProjectInfo) extends DefaultProject(info)
                                    with IdeaProject with Eclipsify with AkkaProject {
 
   // Akka actor is defined by default
