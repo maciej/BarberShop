@@ -1,6 +1,5 @@
 package org.inszy.barbershop
 
-import java.util.concurrent.atomic.AtomicInteger
 import collection.mutable.Queue
 import akka.actor.{ActorRef, PoisonPill, Actor}
 import org.inszy.barbershop.Conversions._
@@ -41,7 +40,6 @@ class BarberShop extends Actor {
   }
 
   val availableBarbers = new Queue[ActorRef]()
-
 
   def receive() = {
     case OpenTheShop =>
