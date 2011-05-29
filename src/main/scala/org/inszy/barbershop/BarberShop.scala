@@ -65,7 +65,7 @@ class BarberShop extends Actor {
 class Customer(val name: String) extends Actor {
   def receive() = {
     case AskToLeave => {
-      println("%s: I left, oh well".format(name))
+      println("%s: I left, oh well.".format(name))
       self ! PoisonPill
     }
     case AskForName => self.reply(name)
@@ -83,17 +83,3 @@ class Barber(barberShop: ActorRef) extends Actor {
     }
   }
 }
-
-case object OpenTheShop
-
-case object CloseTheShop
-
-case class BarberGoesToSleep(barber: ActorRef)
-
-case class CustomerComesIn(customer: ActorRef)
-
-case object AskToLeave
-
-case object AskForName
-
-case class CutHair(customer: ActorRef)
